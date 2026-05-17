@@ -1,0 +1,237 @@
+/* ─────────────────────────────────────────
+   Alba Library System — Profile Page
+───────────────────────────────────────── */
+
+/* ── CONTAINER ── */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px 60px;
+  background: var(--off-white);
+  min-height: calc(100vh - 120px);
+}
+
+/* ── CARD ── */
+.profile-card {
+  width: 100%;
+  max-width: 560px;
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 4px 24px rgba(13,43,78,0.07);
+  height: fit-content;
+}
+
+/* ── TOP SECTION ── */
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.profile-avatar-large {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--accent));
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(13,43,78,0.2);
+}
+
+.profile-top-info h2 {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.profile-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-badge-lg {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+}
+
+.profile-status-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.status-active   { background: #D1FAE5; color: #065F46; }
+.status-inactive { background: #FEE2E2; color: #991B1B; }
+
+/* ── DIVIDER ── */
+.profile-divider {
+  height: 1px;
+  background: rgba(200,212,224,0.6);
+  margin: 0 0 28px;
+}
+
+/* ── FIELDS ── */
+.profile-fields {
+  margin-bottom: 28px;
+}
+
+.profile-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: var(--off-white);
+  margin-bottom: 8px;
+  transition: border-color 0.15s;
+}
+
+.profile-field:last-child {
+  margin-bottom: 0;
+}
+
+.profile-field:has(.profile-input) {
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(30,111,191,0.08);
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.field-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: right;
+}
+
+.field-status {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+/* ── INPUT ── */
+.profile-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: transparent;
+  outline: none;
+  text-align: right;
+  min-width: 0;
+}
+
+.profile-input::placeholder { color: #9CA3AF; }
+
+/* ── ACTIONS ── */
+.profile-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  padding: 13px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.profile-edit-btn:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.profile-cancel-btn {
+  flex: 1;
+  padding: 13px;
+  background: #F3F4F6;
+  color: var(--text);
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.profile-cancel-btn:hover { background: #E5E7EB; }
+
+.profile-save-btn {
+  flex: 1;
+  padding: 13px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.profile-save-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .profile-card { padding: 24px 20px; }
+  .profile-top { flex-direction: column; text-align: center; }
+  .profile-top-info h2 { font-size: 18px; }
+  .profile-badges { justify-content: center; }
+  .profile-field { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .field-value, .profile-input { text-align: left; }
+}
